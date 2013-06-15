@@ -1,0 +1,8 @@
+<div ng-repeat="brand in brands | orderBy:'name'">
+	<a href="#/brand/{{brand.id}}">
+		<div class="branLogoContainer">
+			<div class="brandLogo"><img src="{{brand.img}}" alt="{{brand.name}}"/></div>
+			<h1 class="brandName">{{brand.name}}</h1>
+		</div>
+	</a>
+</div>

@@ -1,0 +1,171 @@
+.listEnviroments{
+margin-bottom: 10px;
+padding: 4px 6px;
+	border: 1px solid #cccccc;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+color: #555555;
+vertical-align: middle;
+font-size: 14px;
+line-height: 20px;
+-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+-o-transition: border linear 0.2s, box-shadow linear 0.2s;
+transition: border linear 0.2s, box-shadow linear 0.2s;	
+}
+.clear{
+	clear: both;
+}
+.left{float: left;}
+.right{float: right;}
+
+.listEnviromentItem{
+	margin: 0px;
+	width: 338px;
+}
+.branLogoContainer{
+	float: left;
+	clear: both;
+	margin: 15px;
+	padding: 10px;
+	width: 90%;
+	border: 1px solid #CCC;
+	border-radius: 10px;
+}
+form {
+margin: 0 20px 20px;
+}
+
+.brandLogo{float: right; max-width: 45%;}
+.brandName{float: left;}
+@media screen and (min-width: 320px){
+	.envSelector{
+		margin-left: 0px;
+		width: 100%;
+	}
+ }
+ @media screen and (min-width: 767px){
+	.brandTitle{
+		margin-left: 0px;
+	}
+	input.inputFilter{
+ 		margin-left: 30px;
+ 	}
+	
+	.branLogoContainer{
+		float: left;
+		clear: both;
+		margin: 15px;
+		padding: 10px;
+		width: 93%;
+		border: 1px solid #CCC;
+		border-radius: 10px;
+		margin-left: 5px;
+	}
+	.envSelector {
+		margin-left: 20px;
+		width: 93%;
+	}
+ }
+
+ @media screen and (min-width: 768px) and (max-width: 1024px){
+	input.inputFilter{
+ 		margin-left: 20px;
+ 	}
+ 	.branLogoContainer{
+ 		width: 95%;
+ 	}
+ }
+
+ @media screen and (min-width: 1024px){
+	.envList{margin-left: 0;}
+	.brandTitle {
+		margin-left: 0px;
+	}
+	 input.username{
+	 	float: left;
+	 	clear: right;
+	 	width: 100%;
+	 }
+	input.password{
+	 	float: left;
+	 	clear: left;
+	 	width: 100%;
+	 }
+
+	 ul.listEnviroments{
+	 	width: 100%;
+	 }
+ }
+
+ @media screen and (min-width: 1200px){
+ 	select{ width: 1190px;} 
+ }
+
+*{	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.5);}
+
+ a{
+	color:black;
+ }
+
+ a:hover{
+	color:#555;
+ }
+
+ input.username{
+ 	float: left;
+ 	clear: right;
+ 	width: 98%;
+ }
+input.password{
+ 	float: left;
+ 	clear: left;
+ 	width: 98%;
+ }
+
+ ul.listEnviroments{
+ 	width: 98%;
+ }
+
+.separator{
+	width: 100%;
+	height: 2px;
+	display: block;
+	float: left;
+	background-color: #ccc;
+	margin-bottom: 10px;
+}
+
+.envList{margin-left: 0px;}
+
+.ipad.landscape .envList {
+margin-left: 20px;
+}
+
+.ipad.landscape input.inputFilter {
+margin-left: 20px;
+}
+
+.envSelector{
+	/*margin-left: 20px;*/
+}
+footer{
+	width: 100%;
+	position:fixed;
+	float: left;
+	height: 40px;
+	left: 0;
+	bottom: 0;
+	background-color: black;
+}
+footer img{
+	float: left;
+	position: relative;
+	color: white;
+	height: 30px;
+	margin: 5px 10px;
+}

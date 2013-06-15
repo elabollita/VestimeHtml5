@@ -1,0 +1,38 @@
+    <!--div class="container" ng-repeat="brand in brands | filter:'{{brandId}}'" -->
+    <div class="left clear span12">Brand Env: </div>
+    <!--select class="envSelector" ng-model="search.env">
+      <option value="" >Todos los Entornos</option>
+      <option value="itl">itl</option>
+      <option value="dev">dev</option>
+      <option value="prod">prod</option>
+      <option value="pre-b">pre-b</option>
+    </select-->
+    <select class="envSelector" ng-repeat="filter: {id: brandId}" ng-model="search.env" ng-options="brand for brand in brands">
+      <option value="">Todos los Entornos</option>
+      <!--option ng-repeat="data in brand.data" value="{{data.env}}">{{data.env}} - {{data.seg}}</option-->
+    </select>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    	setTimeout(function(){
+    		var brandSelectedInputValue = $("#brandIdSelected").attr('placeholder');
+    		$("#brandIdSelected").val(brandSelectedInputValue);
+    	}, 200)
+    })
+    </script>
+    <!--div class="container span12" ng-repeat="brand in brands | filter:{id: brandId}" -->
+    <div class="container span12" ng-repeat="brand in brands | filter: {id: brandId} " >
+      <div class='span12 envList'>
+      	<h1 class='brandTitle left span4'>{{brand.name}}</h1>
+      	<!--img class='left' src='{{brand.img}}' alt="{{brand.name}}"/-->
+        <div class='' ng-repeat="data in brand.data | filter:search" >
+              <div class='separator'></div>
+              <input type="text" class="left username span6" value="user: {{data.user}}"/>
+              <input type="text" class="left password span6" value="passwd: {{data.password}}"/>
+              <ul class="unstyled listEnviroments left clear span6">
+                 <li class="listEnviromentItem span6"><a href="{{data.url}}" target="_blank">{{data.env}} - {{data.seg}}</a></li>
+             </ul>
+        </div>
+        <div class='separator'></div>
+  	  </div>
+    </div> <!-- /container -->
+    <!--pre>$routeParams = {{$routeParams}}</pre-->

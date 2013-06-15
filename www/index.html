@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+  <link rel="stylesheet" href="css/styles.css" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>GM Enviroments</title>
+</head>
+<body>
+    <body data-ng-app="demoApp">
+   <div class="navbar navbar-inverse navbar-fixed-top" ng-controller="enviromentController">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">GM Enviroments</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="navItem" ng-repeat="brand in brands | orderBy:'name'"><a href="#/brand/{{ brand.id }}" class="navItemLink">{{ brand.name }}</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+  <div data-ng-view="" class='viewer'></div>
+  <footer>
+      <img src="img/logo-mrm.png">
+    </footer>
+    <script type="text/javascript" src='js/jquery-1.9.1.min.js'></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <script type="text/javascript" src="js/detectizr.min.js"></script>
+    <script>
+      Modernizr.Detectizr.detect({detectScreen:false});
+      var windowHeight = $(window).height();
+      $('.viewer').css('height',windowHeight);
+    </script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+</body>
+</html>

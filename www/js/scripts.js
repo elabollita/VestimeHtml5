@@ -23,6 +23,11 @@
                     controller: 'loginController',
                     templateUrl: urlBase + 'partials/login.html'
                 })
+            .when('/splash',
+                {
+                    controller: 'splashController',
+                    templateUrl: urlBase + 'partials/splash.html'
+                })
             .otherwise({ redirectTo: '/loby' });
     });
 
